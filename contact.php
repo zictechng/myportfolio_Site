@@ -129,7 +129,7 @@ if (isset($_POST['btn_contact'])) {
     </div><br>".'<br/>';}
     else{
     $success_message = "<div class='alert alert-danger' role='alert'>
-    Failed! Message not sent, try again.</div>
+    Failed! Message not sent, Please enter the correct answer below and try again.</div>
     <br>".'<br/>';
         }
     }
@@ -195,17 +195,15 @@ if (isset($_POST['btn_contact'])) {
                </div>
                <div class="col-xl-6 col-lg-6">
                   <div class="tpcontact">
-                        <div class="alert alert-danger" role="alert">
-                             A simple dark alert—check it out!
-                        </div>
+                        <?php echo $success_message?>
                      <h4 class="tp-contact-big-title">Let’s Talk...</h4>
                      <p>How may I help you today? please, drop me a message I will get back swiftly, thank you.</p>
                        
                      <div class="tpcontact__form tpcontact__form-3">
                         <form method="post">
-                           <input name="name" type="text" placeholder="Enter your Name" required>
-                           <input name="email" type="email" placeholder="Enter your Mail" required>
-                           <input name="phone_number" type="number" placeholder="Enter your Phone" required>
+                        <input name="name" value='<?php echo @$contact_name?>' type="text" placeholder="Enter your Name" required>
+                           <input name="email" value='<?php echo @$contact_email?>' type="email" placeholder="Enter your Mail" required>
+                           <input name="phone_number" value='<?php echo @$phone_contact?>' type="number" placeholder="Enter your Phone" required>
                            <textarea name="contact_message" placeholder="Enter your Message" required></textarea>
                            <h3>3+4-4</h3>
                            <input name="ques" type="number" placeholder="Enter correct answer">

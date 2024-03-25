@@ -9,7 +9,7 @@
     <meta name='keywords' content='Online business, Virtual funds, Sale paypal funds, sale paypal, exchange rate, current exchange rate, Bitcoin, Payoneer, Work from home, oza, oza mobile' />
     <meta content="I have over 6 years of experience building, and deploying several applications for start-up  and established businesses." />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="shortcut icon" type="image/x-icon" href="https://oza-mobile-website.onrender.com/assets/images/favicon.svg" />
+    <link rel="shortcut icon" type="image/x-icon" href="https://abel.zictech-ng.com/assets/img/logo/favicon.png" />
 
    <!-- Place favicon.ico in the root directory -->
    <link rel="shortcut icon" type="image/x-icon" href="assets/img/logo/favicon.png">
