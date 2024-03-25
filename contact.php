@@ -1,11 +1,17 @@
 <?php
+$answer_ques = '3';
+$success_message = "";
+
 if (isset($_POST['btn_contact'])) {
     @$contact_name = $_POST['name'];
     @$contact_email = $_POST['email'];
     @$phone_contact = $_POST['phone_number'];
     @$contact_message = $_POST['contact_message'];
+    @$questionPad = $_POST['ques'];
 
-    // send details by email here
+    if($questionPad == $answer_ques)
+    {
+        // send details by email here
     $to = "abelken99@gmail.com";
     $subject = "Contact request from Abel Portfolio Website";
 
@@ -118,12 +124,18 @@ if (isset($_POST['btn_contact'])) {
 
     @$retval = mail($to, $subject, $message, $header);
 
-    $success_message = "Message sent! Thank you for contacting me, I will get in touch swiftly. <br>".'<br/>';
-}
+    $success_message ="<div class='alert alert-success' role='alert'>
+    Message sent! Thank you for contacting me, I will get in touch swiftly. 
+    </div><br>".'<br/>';}
+    else{
+    $success_message = "<div class='alert alert-danger' role='alert'>
+    Failed! Message not sent, try again.</div>
+    <br>".'<br/>';
+        }
+    }
 
 ?>
 <html class="no-js" lang="zxx">
-
 <head>
    <meta charset="utf-8">
    <meta http-equiv="x-ua-compatible" content="ie=edge">
@@ -183,8 +195,12 @@ if (isset($_POST['btn_contact'])) {
                </div>
                <div class="col-xl-6 col-lg-6">
                   <div class="tpcontact">
+                        <div class="alert alert-danger" role="alert">
+                             A simple dark alert—check it out!
+                        </div>
                      <h4 class="tp-contact-big-title">Let’s Talk...</h4>
                      <p>How may I help you today? please, drop me a message I will get back swiftly, thank you.</p>
+                       
                      <div class="tpcontact__form tpcontact__form-3">
                         <form method="post">
                            <input name="name" type="text" placeholder="Enter your Name" required>
